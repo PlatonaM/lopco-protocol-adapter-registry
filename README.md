@@ -24,14 +24,14 @@ _Add new protocol-adapter._
         "image": "http-adapter",
         "data_cache_path": "/data_cache",
         "configs": {
-            "CONF_LOGGER_LEVEL": "debug"
+            "CONF_LOGGER_LEVEL": "info"
         },
-        "ports": {
-            "80/tcp": {
-                "host_interface": null,
-                "host_ports": 7000
+        "ports": [
+            {
+                "port": 80,
+                "protocol": "tcp"
             }
-        }
+        ]
     }
 
     curl \
@@ -59,15 +59,14 @@ _Retrieve protocol-adapters data._
         "image": "http-adapter",
         "data_cache_path": "/data_cache",
         "configs": {
-            "CONF_LOGGER_LEVEL": "debug"
+            "CONF_LOGGER_LEVEL": "info"
         },
-        "ports": {
-            "80": {
-                "protocol": "tcp",
-                "host_interface": null,
-                "host_ports": 7000
+        "ports": [
+            {
+                "port": 80,
+                "protocol": "tcp"
             }
-        }
+        ]
     }
 
 **PUT**
@@ -85,13 +84,12 @@ _Update a protocol-adapter._
         "configs": {
             "CONF_LOGGER_LEVEL": "info"
         },
-        "ports": {
-            "80": {
-                "protocol": "tcp",
-                "host_interface": null,
-                "host_ports": 7000
+        "ports": [
+            {
+                "port": 8000,
+                "protocol": "tcp"
             }
-        }
+        ]
     }
 
     curl \
