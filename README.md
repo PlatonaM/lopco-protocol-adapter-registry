@@ -1,22 +1,22 @@
 ### Protocol-Adapter Data Structure
 
-{
-    "name": <string>,
-    "image": <string>,
-    "data_cache_path": <string>,
-    "description": <string>,
-    "configs": {
-        <string>: <string>,
-        ...
-    },
-    "ports": [
-        {
-            "port": <number>,
-            "protocol": <string>("tcp" / "udp" / "sctp")
+    {
+        "name": <string>,
+        "image": <string>,
+        "data_cache_path": <string>,
+        "description": <string>,
+        "configs": {
+            <string>: <string>,
+            ...
         },
-        ...
-    ]
-}
+        "ports": [
+            {
+                "port": <number>,
+                "protocol": <string>("tcp" / "udp" / "sctp")
+            },
+            ...
+        ]
+    }
 
 ### API
 
